@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số chẵn</title>
+</head>
+<body>
+    <input type="number" placeholder="Nhập số kiểm tra vô đây..."> 
+    <button type="submit">Kiểm tra</button>
+    <script>
+        const inputElement = document.querySelector('input')
+        const btnCheck = document.querySelector('button')
+        btnCheck.addEventListener('click', getEvenNum)
+        function getEvenNum(){
+            if(Number.isInteger(Number(inputElement.value))){
+                return inputElement.value % 2 === 0 ? alert('Chuẩn số chẵn luôn!') : alert('Số lẻ mà!')
+            } else {
+                alert('Cho 1 số nguyên rồi tính tiếp!')
+            }
+        }
+    </script>
+</body>
+</html>
