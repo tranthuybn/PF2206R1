@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <form action="">
+        <input class="num-1" type="number">
+        <input class="num-2" type="number">
+        <button class="btn-add">Addition(+)</button>
+        <button class="btn-sub">Subtraction(-)</button>
+        <button class="btn-mult">Multiplication(x)</button>
+        <button class="btn-divi">Division(/)</button>
+    </form>
+
+    <h1>Caculator expand</h1>
+    <form action="">
+        <input class="num-3" type="number">
+        <input class="num-4" type="number">
+        <button class="btn-add-2">Addition(+)</button>
+        <button class="btn-sub-2">Subtraction(-)</button>
+        <button class="btn-mult-2">Multiplication(x)</button>
+        <button class="btn-divi-2">Division(/)</button>
+    </form>
+
+    <!-- <h1>Google Caculator</h1>
+    <table>
+        <tr>
+            <td colspan="7">
+                <input type="text" class="caculate"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnRad" type="button" value="Rad" />
+            </td>
+            <td>
+                <input id="reset" type="button" value="CE" />
+            </td>
+            <td>
+                <input id="btn!" type="button" value="x!" />
+            </td>
+            <td>
+                <input id="btnOParen" type="button" value="(" />
+            </td>
+            <td>
+                <input id="btnCParen" type="button" value=")"  />
+            </td>
+            <td>
+                <input id="btnPcnt" type="button" value="%" />
+            </td>
+            <td>
+                <input id="btnAC" type="button" value="AC" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnLnV" type="button" value="LnV" />
+            </td>
+            <td>
+                <input id="btnSin" type="button"  value="sin" />
+            </td>
+            <td>
+                <input id="btnLn" type="button"  value="ln" />
+            </td>
+            <td>
+                <input id="btn7" type="button" value="7" />
+            </td>
+            <td>
+                <input id="btn8" type="button" value="8" />
+            </td>
+            <td>
+                <input id="btn9" type="button" value="9" />
+            </td>
+            <td>
+                <input id="btnDivi" type="button"  value="÷"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnSineInv" type="button"  value="asin" />
+            </td>
+            <td>
+                <input id="btnSine" type="button"  value="sin" />
+            </td>
+            <td>
+                <input id="btnLN" type="button"  value="ln" />
+            </td>
+            <td>
+                <input id="btn4" type="button" value="4" />
+            </td>
+            <td>
+                <input id="btn5" type="button" value="5" />
+            </td>
+            <td>
+                <input id="btn6" type="button" value="6"/>
+            </td>
+            <td>
+                <input id="btnMul" type="button"  value="×" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnCosInv" type="button"  value="acos" />
+            </td>
+            <td>
+                <input id="btnCos" type="button"  value="cos" />
+            </td>
+            <td>
+                <input id="btnLog" type="button"  value="log" />
+            </td>
+            <td>
+                <input id="btn1" type="button" value="1"/>
+            </td>
+            <td>
+                <input id="btn2" type="button" value="2"/>
+            </td>
+            <td>
+                <input id="btn3" type="button" value="3"/>
+            </td>
+            <td>
+                <input id="btnSub" type="button"  value="-" onclick="set('-')" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="btnTanInv" type="button"  value="atan" />
+            </td>
+            <td>
+                <input id="btnTan" type="button"  value="tan" />
+            </td>
+            <td>
+                <input id="btnSqrt" type="button"  value="√" />
+            </td>
+            <td>
+                <input id="btn0" type="button" value="0"  />
+            </td>
+            <td>
+                <input id="btnPeriod" type="button" value="." />
+            </td>
+            <td>
+                <input id="btnEqual" type="button" name="equal" value="=" />
+            </td>
+            <td>
+                <input id="btnAdd" type="button"  value="+" />
+            </td>
+    </table> -->
+    <script>
+        // Caculator - 4 hàm
+        const input1 = document.querySelector('.num-1')
+        const input2 = document.querySelector('.num-2')
+        const btnAdd = document.querySelector('.btn-add')
+        const btnSub = document.querySelector('.btn-sub')
+        const btnMult = document.querySelector('.btn-mult')
+        const btnDivi = document.querySelector('.btn-divi')
+        btnAdd.addEventListener('click', add)
+        btnSub.addEventListener('click', subtracte)
+        btnMult.addEventListener('click', multiplicate)
+        btnDivi.addEventListener('click', divide)
+        function add(e){
+            e.preventDefault();
+            alert(Number(input1.value) + Number(input2.value))
+        }
+        function subtracte(e){
+            e.preventDefault();
+            alert(Number(input1.value) - Number(input2.value))
+        }
+        function multiplicate(e){
+            e.preventDefault();
+            alert(Number(input1.value) * Number(input2.value))
+        }
+        function divide(e){
+            e.preventDefault();
+            input2.value == 0 ? alert('Phép tính sai, vui lòng nhập đúng') :  alert(Number(input1.value) / Number(input2.value))
+        }
+
+        // Caculator expand - 1 hàm 
+        const input3 = document.querySelector('.num-3')
+        const input4 = document.querySelector('.num-4')
+        const btnAdd2 = document.querySelector('.btn-add-2')
+        const btnSub2 = document.querySelector('.btn-sub-2')
+        const btnMult2 = document.querySelector('.btn-mult-2')
+        const btnDivi2 = document.querySelector('.btn-divi-2')
+        btnAdd2.addEventListener('click', caculator)
+        btnSub2.addEventListener('click', caculator)
+        btnMult2.addEventListener('click', caculator)
+        btnDivi2.addEventListener('click', caculator)
+        function caculator(e){
+            e.preventDefault()
+            switch(e.target) {
+                case btnAdd2: 
+                   alert(Number(input3.value) + Number(input4.value))
+                   break
+                case btnSub2: 
+                    alert(Number(input3.value) - Number(input4.value))
+                    break
+                case btnMult2: 
+                    alert(Number(input3.value) * Number(input4.value))
+                    break
+                case btnDivi2: 
+                    input4.value == 0 ?  alert('Phép tính sai, vui lòng nhập đúng') :  alert(Number(input3.value) / Number(input4.value))
+                    break
+            }
+        }
+    </script>
+</body>
+</html>
