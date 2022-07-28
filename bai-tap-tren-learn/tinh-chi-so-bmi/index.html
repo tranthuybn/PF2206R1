@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chỉ số BMI</title>
+</head>
+<body>
+    <script>
+        let weight = prompt('Nhập cân nặng (kg)')
+        let height = prompt('Nhập chiều cao (m)')
+        let result = weight / height**2
+        if(result < 16){
+            alert('Gầy độ III')
+        } else if(result < 17 && result >= 16){
+            alert('Gầy độ II')
+        } else if(result < 18.5 && result >= 17){
+            alert('Gầy độ I')
+        } else if(result < 25 && result >= 18.5){
+            alert('Bình thường')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm đại học khối D</title>
+</head>
+<body>
+    <h1>Tính điểm đại học khối D</h1>
+    <form action="">
+        <div>
+            <label for="math">Môn Toán</label>
+            <input id="math" type="number">
+        </div>
+        <div>
+            <label for="Literature">Môn Văn</label>
+            <input id="literature" type="number">
+        </div>
+        <div>
+            <label for="english">Môn Anh</label>
+            <input id="english" type="number">
+        </div>
+        <div>
+            <label for="area">Khu vực</label>
+            <select name="" id="area">
+                <option value="0.75">KV1</option>
+                <option value="0.5">KV2-NT</option>
+                <option value="0.25">KV2</option>
+                <option value="0">KV3</option>
+            </select>
+        </div>
+        <button id="calc" type="submit">Tính điểm</button>
+    </form>
+    <script>
+        const btnCalc = document.getElementById('calc')
+        const math = document.getElementById('math')
+        const literature = document.getElementById('literature')
+        const english = document.getElementById('english')
+        const area = document.getElementById('area')
+        btnCalc.addEventListener('click',calcPoint)
+        function calcPoint(e){
+            e.preventDefault()
+            let mPoint = +math.value
+            let lPoint = +literature.value
+            let ePoint = +english.value
+
+            if(mPoint <= 10 && lPoint <= 10 && ePoint <= 10 && mPoint > 0 && lPoint > 0 && ePoint > 0){
+                let result = mPoint + lPoint + ePoint + +area.value
+                alert(result)
+            } else{
+                alert("Nhập sai")
+            }
+        }
+
+    </script>
+</body>
+</html>
